@@ -18,7 +18,7 @@
 
     /* btn-primary-start */
     --btn-weight: 500;
-    --btn-font-size: 0.875rem;
+    --btn-font-size: clamp(0.875rem, calc((1.125rem - 0.875rem) / 2) + 2.5vw, 1.125rem);
     --btn-font-family: 'Poppins', sans-serif;
     --btn-padding: 0.6875em 1.25em;
     --btn-radius: 12px;
@@ -39,26 +39,52 @@
     border: 0;
 }
 
+/* shared-styles */
 html {
     max-width: 1440px;
     margin: 0 auto;
     /* font */
     font-family: var(--font-family-primary);
+
+    & h1 {
+        font-size: clamp(1.5rem, calc((3rem - 1.5rem) / 2) + 2.5vw, 3rem);
+        font-weight: 500;
+        color: var(--color-heading-primary);
+    }
+
+    & h2 {
+        font-size: clamp(1.5rem, calc((2.25rem - 1.5rem) / 2) + 2.5vw, 2.25rem);
+        font-weight: 500;
+        color: var(--color-heading-primary);
+    }
+
+    & h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-heading-primary);
+    }
+
+    & h4 {
+        font-size: clamp(0.75rem, calc((1.125rem - 0.75rem) / 2) + 2.5vw, 1.125rem);
+        font-weight: 500;
+    }
+
+    & h5 {
+        font-size: clamp(0.625rem, calc((0.875rem - 0.625rem) / 2) + 2.5vw, 0.875rem);
+        font-weight: 500;
+        color: #828282;
+    }
+
+    & p {
+        font-size: clamp(0.75rem, calc((1.125rem - 0.75rem) / 2) + 2.5vw, 1.125rem);
+        color: var(--color-paragraph-primary);
+    }
+
 }
 
 
 
 /* utility-class-start */
-
-h1 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--color-font-primary);
-}
-
-p {
-    color: var(--color-paragraph-primary);
-}
 
 /* btn-primary */
 .btn-primary {
@@ -82,22 +108,22 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1em 0;
 
     & h2 {
-        font-size: 1.5rem;
+        font-weight: 800;
         font-family: 'Heebo', sans-serif;
     }
 
     & ul {
         display: none;
-        gap: 1rem;
+        gap: 1em;
         list-style: none;
 
         & a {
             text-decoration: none;
             color: inherit;
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 0.25rem + 1.5vw, 1.5rem);
             font-weight: 500;
         }
     }
@@ -112,18 +138,16 @@ nav {
 /* banner-start */
 
 .banner-top {
-    margin-top: 3.6875rem;
+    margin-top: 3.6875em;
     margin-left: 10%;
 
-    & h3 {
+    & h4 {
         color: var(--color-primary);
-        font-size: 0.75rem;
-        font-weight: 500;
     }
 
     & h1 {
         max-width: 18ch;
-        margin-bottom: 0.9375rem;
+        margin-bottom: 0.9375em;
     }
 }
 
@@ -147,11 +171,6 @@ nav {
 
     }
 
-    & h3 {
-        font-size: 0.625rem;
-        color: #828282;
-    }
-
     & input {
         width: 100%;
         max-width: 33ch;
@@ -163,7 +182,7 @@ nav {
     }
 
     & button {
-        translate: 290% -108%;
+        transform: translate(290%, -108%);
     }
 }
 
@@ -176,9 +195,7 @@ nav {
         & ul {
             display: flex;
 
-            & a {
-                font-size: 1rem;
-            }
+            font-size: 1rem;
         }
 
         & div {
