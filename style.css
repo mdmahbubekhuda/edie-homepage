@@ -98,7 +98,8 @@ html {
 /* utility-class-end */
 
 
-header {
+header,
+main {
     max-width: 90vw;
     margin: 0 auto;
 }
@@ -188,9 +189,72 @@ nav {
 
 /* banner-end */
 
+/* services-start */
+main h2 {
+    margin-bottom: 2.1875rem;
+    padding-left: 2rem;
+}
+
+.services-container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+    & article {
+        flex: 1;
+        padding-left: 2rem;
+    }
+
+    & svg {
+        width: 67px;
+        height: 67px;
+        padding: 1rem;
+        border-radius: 16px;
+        margin: 2.1875rem 0;
+    }
+
+    & h3 {
+        margin-bottom: 2.1875rem;
+    }
+
+    & button {
+        color: #828282;
+        background-color: #E0E0E0;
+        margin: 2.1875rem 0;
+    }
+
+}
+
+.ui-ux-design>svg {
+    background-color: #2D9CDB;
+}
+
+.front-end>svg {
+    background-color: #27AE60;
+}
+
+.back-end>svg {
+    background-color: #EB5757;
+}
+
+/* hover-on-articles */
+.services-container>article:hover {
+    border-radius: 24px;
+    box-shadow: 0px 10px 30px 0px rgba(51, 51, 51, 0.10);
+}
+
+.services-container>article:hover button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* services-end */
+
 
 /* mobile-view */
 @media screen and (min-width: 640px) {
+
+    /* navigation */
     nav {
         & ul {
             display: flex;
@@ -203,4 +267,14 @@ nav {
         }
     }
 
+    /* banner */
+    .banner-top,
+    .banner-bottom {
+        margin-left: 15%;
+    }
+
+    /* services */
+    .services-container {
+        flex-direction: row;
+    }
 }
