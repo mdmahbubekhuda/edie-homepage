@@ -151,7 +151,7 @@ nav {
         background-color: #E0E0E0;
         color: #828282;
         width: 10em;
-        padding: 1rem;
+        padding: 1em;
         border-radius: 24px;
         box-shadow: 0px 10px 30px 0px rgba(51, 51, 51, 0.10);
         opacity: 0.97;
@@ -201,7 +201,7 @@ nav {
         height: 2.9375rem;
         background-color: #F2F2F2;
         border-radius: var(--btn-radius);
-        padding-left: 1rem;
+        padding-left: 1em;
         font-size: var(--btn-font-size);
     }
 
@@ -215,7 +215,7 @@ nav {
 /* services-start */
 main h2 {
     margin-bottom: 2.1875rem;
-    padding-left: 2rem;
+    padding-left: 2em;
 }
 
 .services-container {
@@ -226,13 +226,13 @@ main h2 {
 
     & article {
         flex: 1;
-        padding-left: 2rem;
+        padding: 0 1em;
     }
 
     & svg {
         width: 67px;
         height: 67px;
-        padding: 1rem;
+        padding: 1em;
         border-radius: 16px;
         margin: 2.1875rem 0;
     }
@@ -294,6 +294,7 @@ main h2 {
         color: var(--color-primary);
         text-decoration: none;
     }
+
     & svg {
         vertical-align: middle;
     }
@@ -301,7 +302,72 @@ main h2 {
 
 /* design-end */
 
+/* team-start */
+.team-container {
+    margin: 5rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 
+    & .team-content {
+        flex: 1;
+
+        & h4 {
+            color: #EB5757;
+        }
+
+        & h2 {
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        & p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    & .team-img-container {
+        flex: 1;
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        & img {
+            border-radius: 24px;
+            width: 100%;
+        }
+
+        & img:nth-child(3) {
+            order: 1;
+            grid-row: 1 / span 2;
+        }
+    }
+
+}
+
+.team-message {
+    & h2 {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    & .team-message-card {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+
+        & img {
+            width: 100%;
+            max-height: 50%;
+            grid-row: 1 / span 2;
+            border-radius: 12px;
+        }
+    }
+}
+
+/* team-end */
 
 
 
@@ -363,8 +429,14 @@ main h2 {
         }
     }
 
-    .design-see-more{
+    .design-see-more {
         text-align: right;
         transform: translateY(-5vh);
+    }
+
+    /* team */
+    .team-container {
+        flex-direction: row;
+        align-items: center;
     }
 }
