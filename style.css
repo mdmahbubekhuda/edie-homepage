@@ -239,9 +239,9 @@ main h2 {
 
 .services-container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: column;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 
     & article {
         flex: 1;
@@ -253,31 +253,31 @@ main h2 {
         height: 67px;
         padding: 1em;
         border-radius: 16px;
-        margin: 2.1875rem 0;
+        margin: 1rem 0;
     }
 
     & h3 {
-        margin-bottom: 2.1875rem;
+        margin-bottom: 1rem;
     }
 
     & button {
         color: #828282;
         background-color: #E0E0E0;
-        margin: 2.1875rem 0;
+        margin: 1rem 0;
     }
 
-}
+    & .ui-ux-design>svg {
+        background-color: #2D9CDB;
+    }
 
-.ui-ux-design>svg {
-    background-color: #2D9CDB;
-}
+    & .front-end>svg {
+        background-color: #27AE60;
+    }
 
-.front-end>svg {
-    background-color: #27AE60;
-}
+    & .back-end>svg {
+        background-color: #EB5757;
+    }
 
-.back-end>svg {
-    background-color: #EB5757;
 }
 
 /* hover-on-articles */
